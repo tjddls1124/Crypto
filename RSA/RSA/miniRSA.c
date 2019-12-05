@@ -33,7 +33,7 @@ uint ModAdd(uint a, uint b, byte op, uint n) {
 
 	return result;
 }
-uint divide(uint dividend, uint divisor) // 나눗셈 비트연산 구현은 너무어려워서 구글링하였습니다ㅠㅠㅠ 죄송합니다
+uint divide(uint dividend, uint divisor)
 {
 	uint i = 0, sign = 0, div = 0;
 
