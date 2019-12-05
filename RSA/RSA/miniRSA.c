@@ -1,7 +1,5 @@
 /*
 * @file    rsa.c
-* @author  최성인 / 2012042201
-* @date    11/30
 * @brief   mini RSA implementation code
 * @details 세부 설명
 */
@@ -22,7 +20,6 @@ uint p, q, e, d, n;
 * @param     byte op    : +, - 연산자.
 * @param     uint n      : 모듈러 값.
 * @return    uint result : 피연산자의 덧셈에 대한 모듈러 연산 값. (a op b) mod n
-* @todo      모듈러 값과 오버플로우 상황을 고려하여 작성한다.
 */
 uint ModAdd(uint a, uint b, byte op, uint n) {
 	uint result = 0;
@@ -103,7 +100,6 @@ uint mod(uint dividend, uint divisor)
 * @param      uint y       : 피연산자2.
 * @param      uint n       : 모듈러 값.
 * @return     uint result  : 피연산자의 곱셈에 대한 모듈러 연산 값. (a x b) mod n
-* @todo       모듈러 값과 오버플로우 상황을 고려하여 작성한다.
 */
 uint ModMul(uint x, uint y, uint n) {
 	uint result = 0;
@@ -119,7 +115,6 @@ uint ModMul(uint x, uint y, uint n) {
 * @param      uint exp    : 피연산자2.
 * @param      uint n      : 모듈러 값.
 * @return     uint result : 피연산자의 연산에 대한 모듈러 연산 값. (base ^ exp) mod n
-* @todo       모듈러 값과 오버플로우 상황을 고려하여 작성한다.
 'square and multiply' 알고리즘을 사용하여 작성한다.
 */
 uint sqMult(uint base, uint exp, uint n) {
@@ -203,7 +198,7 @@ bool IsPrime(uint testNum, uint repeat) { // 밀러-라빈 소수판별법 알�
 * @param       uint a      : 피연산자1.
 * @param       uint m      : 모듈러 값.
 * @return      uint result : 피연산자의 모듈러 역수 값.
-* @todo        확장 유클리드 알고리즘을 사용하여 작성하도록 한다.
+* @todo        확장 유클리드 알고리즘을 사용
 */
 uint ModInv(uint a, uint m) {
 	uint x = a;
@@ -243,7 +238,6 @@ uint ModInv(uint a, uint m) {
 * @param     uint *d   : 개인키 값.
 * @param     uint *n   : 모듈러 n 값.
 * @return    void
-* @todo      과제 안내 문서의 제한사항을 참고하여 작성한다.
 */
 void miniRSAKeygen(uint *p, uint *q, uint *e, uint *d, uint *n) {
 
@@ -286,7 +280,6 @@ void miniRSAKeygen(uint *p, uint *q, uint *e, uint *d, uint *n) {
 * @param     uint key    : 키 값.
 * @param     uint n      : 모듈러 n 값.
 * @return    uint result : 암복호화에 결과값
-* @todo      과제 안내 문서의 제한사항을 참고하여 작성한다.
 */
 uint miniRSA(uint data, uint key, uint n) {
 	uint result;
