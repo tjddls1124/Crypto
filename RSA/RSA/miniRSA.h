@@ -3,8 +3,6 @@
   1. miniRSA헤더 파일
     헤더파일에는 miniRSA관련 인터페이스 및 WELL Random number generator 코드가 포함되어 있습니다.
     안전한 난수 생성을 위한 WELL Random number generator를 사용합니다.
-    WELL Random number generator의 관련된 내용은 발표 논문 및 인터넷에서 쉽게 찾을 수 있으며,
-    소스코드 또한 발표논문에서 쉽게 얻을 수 있습니다. 혹시 관심있는 학생은 찾아보길 바랍니다.
     
     사용 방법은 다음과 같습니다.
     mini RSA 알고리즘 구현 중 WELLRNG512a()를 통해서 난수를 생성합니다.
@@ -63,11 +61,11 @@ void InitWELLRNG512a(uint *init);
 double WELLRNG512a(void);
 
 // mini RSA 관련 인터페이스(구현해야 합니다.)
-uint modMul(uint x, uint y, uint mod);
-uint modPow(uint base, uint exp, uint mod);
-bool isPrime(uint n, uint repeat);
-uint gcd(uint a, uint b);
-uint modInv(uint a, uint m);
+uint ModMul(uint x, uint y, uint mod);
+uint ModPow(uint base, uint exp, uint mod);
+uint IsPrime(uint testNum, uint repeat);
+uint GCD(uint a, uint b);
+uint ModInv(uint a, uint m);
 void miniRSAKeygen(uint *p, uint *q, uint *e, uint *d, uint *n);
 uint miniRSA(uint data, uint key, uint n);
 

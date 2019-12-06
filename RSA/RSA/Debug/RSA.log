@@ -1,31 +1,18 @@
-﻿  stdafx.cpp
-c:\users\tjddl\source\repos\rsa\rsa\stdafx.cpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-c:\users\tjddl\source\repos\rsa\rsa\stdafx.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-c:\users\tjddl\source\repos\rsa\rsa\targetver.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-  miniRSA.c
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.c : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.h(65): error C2061: 구문 오류: 식별자 'isPrime'
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.h(65): error C2059: 구문 오류: ';'
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.h(65): error C2059: 구문 오류: '<parameter-list>'
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.h(74): error C2065: 'state_i': 선언되지 않은 식별자입니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.h(80): error C2065: 'state_i': 선언되지 않은 식별자입니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.h(81): error C2065: 'state_i': 선언되지 않은 식별자입니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.h(82): error C2065: 'state_i': 선언되지 않은 식별자입니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.h(83): error C2065: 'state_i': 선언되지 않은 식별자입니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.h(84): error C2065: 'state_i': 선언되지 않은 식별자입니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.h(85): error C2065: 'state_i': 선언되지 않은 식별자입니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.h(86): error C2065: 'state_i': 선언되지 않은 식별자입니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.c(35): warning C4013: 'mod'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.c(93): warning C4142: 'mod': 형식이 재정의되었지만 심각하지는 않습니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.c(94): warning C4013: 'mul'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.c(130): warning C4013: 'ModMult'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.c(153): warning C4013: 'ModPowlt'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.c(165): error C2061: 구문 오류: 식별자 'IsPrime'
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.c(165): error C2059: 구문 오류: ';'
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.c(165): error C2059: 구문 오류: '<parameter-list>'
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.c(250): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.c(261): warning C4013: 'IsPrime'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.c(276): warning C4047: '!=': 'uint *'의 간접 참조 수준이 'int'과(와) 다릅니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.c(319): warning C4244: '=': 'time_t'에서 'uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\tjddl\source\repos\rsa\rsa\minirsa.c(314): warning C4244: '초기화 중': 'time_t'에서 'uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  miniRSA.c
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.c : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.h(72): error C2065: 'state_i': 선언되지 않은 식별자입니다.
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.h(78): error C2065: 'state_i': 선언되지 않은 식별자입니다.
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.h(79): error C2065: 'state_i': 선언되지 않은 식별자입니다.
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.h(80): error C2065: 'state_i': 선언되지 않은 식별자입니다.
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.h(81): error C2065: 'state_i': 선언되지 않은 식별자입니다.
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.h(82): error C2065: 'state_i': 선언되지 않은 식별자입니다.
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.h(83): error C2065: 'state_i': 선언되지 않은 식별자입니다.
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.h(84): error C2065: 'state_i': 선언되지 않은 식별자입니다.
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.c(173): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.c(175): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.c(185): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.c(246): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.c(272): warning C4047: '!=': 'uint *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.c(314): warning C4244: '=': 'time_t'에서 'uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\tjddl\git\crypto\rsa\rsa\minirsa.c(309): warning C4244: '초기화 중': 'time_t'에서 'uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.

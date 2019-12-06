@@ -12,6 +12,13 @@
 
 uint p, q, e, d, n;
 
+uint mod(uint dividend, uint divisor)
+{
+	uint result = dividend % divisor;
+	if (result < 0) result += divisor;
+	return result;
+}
+
 
 /*
 * @brief     모듈러 덧셈 연산을 하는 함수.
@@ -86,12 +93,7 @@ uint divide(uint dividend, uint divisor)
 	}
 	return div;
 }
-uint mod(uint dividend, uint divisor)
-{
-	uint result = dividend - mul(divisor, div(dividend, divisor));
-	if (result < 0) result += divisor;
-	return result;
-}
+
 
 
 /*
@@ -122,7 +124,7 @@ uint sqMult(uint base, uint exp, uint n) {
 		return base;
 	else if (exp == 0) return 0;
 	else if (exp % 2 == 0) {
-		return  ModMult(sqMult(base, exp / 2, n), sqMult(base, exp / 2, n), n);
+		return  ModMul(sqMult(base, exp / 2, n), sqMult(base, exp / 2, n), n);
 	}
 	else if (exp % 2 == 1)
 		return  ModMul(base, ModMul(sqMult(base, exp / 2, n), sqMult(base, exp / 2, n), n), n);
@@ -145,7 +147,7 @@ uint ModPow(uint base, uint exp, uint n) {
 		return (ModPow(base, exp / 2, n) * ModPow(base, exp / 2, n)) % n;
 	}
 	else if (exp % 2 == 1) {
-		return (base * ModPowlt(base, (exp - 1) / 2, n) * ModPow(base, (exp - 1) / 2, n)) % n;
+		return (base * ModPow(base, (exp - 1) / 2, n) * ModPow(base, (exp - 1) / 2, n)) % n;
 	}
 }
 
@@ -157,7 +159,7 @@ uint ModPow(uint base, uint exp, uint n) {
 * @todo       Miller-Rabin 소수 판별법과 같은 확률적인 방법을 사용하여,
 이론적으로 4N(99.99%) 이상 되는 값을 선택하도록 한다.
 */
-bool IsPrime(uint testNum, uint repeat) { // 밀러-라빈 소수판별법 알고리즘을 이용
+uint IsPrime(uint testNum, uint repeat) { // 밀러-라빈 소수판별법 알고리즘을 이용
 
 	uint n = testNum;
 	uint m = n - 1;
@@ -252,7 +254,7 @@ void miniRSAKeygen(uint *p, uint *q, uint *e, uint *d, uint *n) {
 	while (*n < sqMult(2, 31, UINT_MAX)) // 2^31 <= n < 2^32 인 n 을 찾을때까지 반복
 	{
 		r = (uint)(divide(UINT_MAX, 2)* WELLRNG512a()); //  0 ~ 2^31 보다 작은 r값을 임의로 생성하여 p와 q에 할당
-		while (!IsPrime(r, 100)) {
+		while (IsPrime(r, 100) != TRUE) {
 			r = (uint)(divide(UINT_MAX, 2)* WELLRNG512a());
 		}
 		*p = r;
@@ -267,7 +269,7 @@ void miniRSAKeygen(uint *p, uint *q, uint *e, uint *d, uint *n) {
 	phi_n = ModMul(*p - 1, *q - 1, *n);
 
 	*e = (uint)(WELLRNG512a() * phi_n) + 2;	 // 조건을 만족하는 1< e < phi_n 의 e 생성
-	while (gcd(*e, n != 1)) {
+	while (GCD(*e, n != 1)) {
 		*e = (uint)(WELLRNG512a() * phi_n) + 2;
 	}
 	*d = ModInv(*e, phi_n);
