@@ -45,6 +45,8 @@
 #define RND_MIN	0x00b505
 #define FALSE	0
 #define TRUE	1
+#define UINT_MAX      0xffffffff    // maximum unsigned int value
+
 
 // mini RSA 관련 타입
 typedef unsigned char bool;
